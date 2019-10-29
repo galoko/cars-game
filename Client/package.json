@@ -1,0 +1,14 @@
+{
+  "name": "cars-client",
+  "version": "1.0.0",
+  "description": "Client for a little car game using WebRTC.",
+  "scripts": {
+    "build": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

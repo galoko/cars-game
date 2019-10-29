@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {  
+            "name":"Launch via nodemon",
+            "type":"node",
+            "request":"launch",
+            "protocol":"inspector",
+            "cwd":"${workspaceRoot}",
+            "runtimeExecutable":"${workspaceRoot}/node_modules/.bin/nodemon",
+            "args":[  
+               "${workspaceRoot}/main.ts"
+            ],
+            "restart":true,
+            "internalConsoleOptions":"neverOpen",
+            "console": "integratedTerminal"
+         }
+    ]
+}
