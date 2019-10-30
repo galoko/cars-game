@@ -1,3 +1,3 @@
-import setupHttpServer from './server';
+import setupHttpServer from './http-server';
 
 setupHttpServer();
