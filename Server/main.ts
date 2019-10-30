@@ -1,3 +1,3 @@
-import { setupHttpServer } from './server';
+import setupHttpServer from './server';
 
 setupHttpServer();
