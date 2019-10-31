@@ -10,6 +10,8 @@ export default function setupHttpServer(): void {
         // TODO
     });
 
+    console.log('test');
+
     app.listen(port, () => {
         console.log(`server started at http://localhost:${port}`);
     });

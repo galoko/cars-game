@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Server for a little car game using WebRTC.",
   "scripts": {
+    "pretest": "eslint --ext .js,.ts .",
     "start": "nodemon --inspect main.ts"
   },
   "author": "",
