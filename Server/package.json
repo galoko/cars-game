@@ -4,7 +4,8 @@
   "description": "Server for a little car game using WebRTC.",
   "scripts": {
     "pretest": "eslint --ext .js,.ts .",
-    "start": "nodemon --inspect main.ts"
+    "start": "nodemon --inspect main.ts",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",

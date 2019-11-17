@@ -9,11 +9,13 @@
             "cwd":"${workspaceRoot}",
             "runtimeExecutable":"${workspaceRoot}/node_modules/.bin/nodemon",
             "args":[  
+               "--exitcrash",
                "${workspaceRoot}/main.ts"
             ],
             "restart":true,
             "internalConsoleOptions":"neverOpen",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "stopOnEntry":false
          }
     ]
 }
