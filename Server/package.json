@@ -4,8 +4,7 @@
   "description": "Server for a little car game using WebRTC.",
   "scripts": {
     "pretest": "eslint --ext .js,.ts .",
-    "start": "nodemon --inspect main.ts",
-    "build": "tsc"
+    "start": "nodemon --inspect main.ts"
   },
   "author": "",
   "license": "ISC",
@@ -18,11 +17,13 @@
     "nodemon": "^1.19.4",
     "prettier": "^1.18.2",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "@types/ws": "6.0.3",
+    "@types/express": "^4.16.1"
   },
   "dependencies": {
-    "@types/express": "^4.16.1",
     "express": "^4.16.4",
-    "wrtc": "^0.4.2"
+    "wrtc": "^0.4.2",
+    "ws": "^6.0.3"
   }
 }

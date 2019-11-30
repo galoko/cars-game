@@ -10,6 +10,6 @@ module.exports =  {
     sourceType: 'module',  // Allows for the use of imports
   },
   rules: {
-	  "no-console": 1
+	  "no-console": 0
   },
 };

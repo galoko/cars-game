@@ -1,15 +1,18 @@
 {
     "compilerOptions": {
-      "target": "es5",
+      "target": "es2017",
       "module": "commonjs",
   
       "strict": true,
   
-      "noUnusedLocals": true,
+      "noUnusedLocals": false,
       "noUnusedParameters": false,
       "noImplicitReturns": true,
       "noFallthroughCasesInSwitch": true,
+      "strictNullChecks": false,
   
-      "esModuleInterop": true
+      "esModuleInterop": true,
+
+      "sourceMap": true
     }
   }

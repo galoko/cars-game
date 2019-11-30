@@ -1,5 +1,7 @@
 import setupHttpServer from './http-server';
-import setupWebRtcServer from './web-rtc-server';
+import setupWebSocketServer from './websocket-server';
+import { setupWebRtcServer } from './web-rtc-server';
 
 setupHttpServer();
+setupWebSocketServer();
 setupWebRtcServer();

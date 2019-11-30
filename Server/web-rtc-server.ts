@@ -130,7 +130,7 @@ async function waitUntilIceGatheringStateComplete(peerConnection: any): Promise<
         deferred.reject = reject;
     });
 
-    let timeout: any = null;
+    const timeout: any = null;
 
     function onIceCandidate({ candidate }: { candidate: any }): void {
         if (!candidate) {
@@ -143,10 +143,12 @@ async function waitUntilIceGatheringStateComplete(peerConnection: any): Promise<
         }
     }
 
+    /*
     timeout = setTimeout(() => {
         peerConnection.removeEventListener('icecandidate', onIceCandidate);
         deferred.reject(new Error('Timed out waiting for host candidates'));
     }, TIME_TO_HOST_CANDIDATES);
+    */
 
     peerConnection.addEventListener('icecandidate', onIceCandidate);
 
@@ -197,9 +199,12 @@ function signalingState(): any {
     return peerConnection.signalingState;
 }
 
-export default async function setupWebRtcServer(): Promise<any> {
+export async function setupWebRtcServer(): Promise<any> {
+    return;
+
     peerConnection = new WebRTC.RTCPeerConnection({
         sdpSemantics: 'unified-plan',
+        iceServers: [{ urls: 'stun:stun.stunprotocol.org:3478' }, { urls: 'stun:stun.l.google.com:19302' }],
     });
     peerConnection.addEventListener('connectionstatechange', onConnectionStateChange);
     peerConnection.addEventListener('iceconnectionstatechange', iceConnectionStateCallback);
@@ -209,6 +214,7 @@ export default async function setupWebRtcServer(): Promise<any> {
 
     await doOffer();
 
+    console.log(peerConnection.localDescription.sdp);
     console.log(JSON.stringify(peerConnection.localDescription));
 
     /*
@@ -218,4 +224,8 @@ export default async function setupWebRtcServer(): Promise<any> {
         }
     }, TIME_TO_CONNECTED);
     */
+}
+
+export async function getNewWebRtcConnectionOffer(): Promise<any> {
+    //
 }
